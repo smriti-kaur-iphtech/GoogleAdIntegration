@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wE5-sj-W8R">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UMP SDK-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BannerViewController" customModule="GoogleAdsDemonstration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billboards" translatesAutoresizingMaskIntoConstraints="NO" id="VCp-sd-n9v">
+                                <rect key="frame" x="146.66666666666666" y="333.33333333333331" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="EF4-uw-CRo"/>
+                                    <constraint firstAttribute="width" constant="100" id="LZJ-ou-12u"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-5D-2B0" customClass="GADBannerView">
+                                <rect key="frame" x="16" y="768" width="361" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="01W-JV-7XS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVP-cg-zfq">
+                                <rect key="frame" x="100" y="478.33333333333331" width="193" height="34.999999999999943"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Interstitial Ads &gt;"/>
+                                <connections>
+                                    <action selector="interstitialAdAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNy-dV-8ow"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oag-5D-2B0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5Gh-Q9-Llt"/>
+                            <constraint firstItem="SVP-cg-zfq" firstAttribute="top" secondItem="VCp-sd-n9v" secondAttribute="bottom" constant="45" id="AW1-jm-Bus"/>
+                            <constraint firstItem="VCp-sd-n9v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PwQ-R1-gkg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oag-5D-2B0" secondAttribute="trailing" constant="16" id="WIb-Em-auk"/>
+                            <constraint firstItem="SVP-cg-zfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="arF-8K-YCr"/>
+                            <constraint firstItem="VCp-sd-n9v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="cpK-8X-mqt"/>
+                            <constraint firstItem="Oag-5D-2B0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pGa-yN-CoK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SVP-cg-zfq" secondAttribute="trailing" constant="100" id="sf6-co-ANA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="UMP SDK" id="Ic7-3a-LYR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="aPd-Ye-9Zf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="LoN-Ch-cSg">
+                                <rect key="frame" x="233.33333333333337" y="5" width="143.66666666666663" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Privacy Options"/>
+                                <connections>
+                                    <action selector="consentRevokeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rog-oS-7cU"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bannerView" destination="Oag-5D-2B0" id="pxz-vi-MAg"/>
+                        <outlet property="consentRevokeButton" destination="LoN-Ch-cSg" id="vu0-b1-Hmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067.9389312977098" y="-48.591549295774648"/>
+        </scene>
+        <!--Interstitial Ad View Controller-->
+        <scene sceneID="l6J-Vw-wQd">
+            <objects>
+                <viewController storyboardIdentifier="InterstitialAdViewController" id="Hb9-6R-ADz" customClass="InterstitialAdViewController" customModule="GoogleAdsDemonstration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WZs-F9-w7J">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRb-UM-fmm">
+                                <rect key="frame" x="90.666666666666686" y="408.66666666666669" width="212" height="35"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.56078431370000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2fp-NU-2Rh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="138" id="e6s-SS-A85"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Click to see InterstitialAd"/>
+                                <connections>
+                                    <action selector="watchAdAction:" destination="Hb9-6R-ADz" eventType="touchUpInside" id="2WJ-VS-NR5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xmc-Yd-avA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fRb-UM-fmm" firstAttribute="centerX" secondItem="WZs-F9-w7J" secondAttribute="centerX" id="ICv-FQ-qiD"/>
+                            <constraint firstItem="fRb-UM-fmm" firstAttribute="centerY" secondItem="WZs-F9-w7J" secondAttribute="centerY" id="mAs-Ao-Jwe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZM-Gc-shR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765.6488549618321" y="-49.295774647887328"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TyT-Fe-EcI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wE5-sj-W8R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Q7A-7e-sXk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HAd-e2-GsP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2At-Tt-TjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.22137404580153" y="-48.591549295774648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="billboards" width="42" height="42"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
